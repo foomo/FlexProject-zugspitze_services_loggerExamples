@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Application
+	xmlns:fx="http://ns.adobe.com/mxml/2009"
+	xmlns:s="library://ns.adobe.com/flex/spark"
+	xmlns:logger="org.foomo.zugspitze.spark.components.logger.*"
+	minWidth="955"
+	minHeight="600"
+	>
+	<fx:Script>
+		<![CDATA[
+			import org.foomo.core.Foomo;
+			import org.foomo.logging.LogLevel;
+			import org.foomo.logging.TerminalTarget;
+			import org.foomo.managers.LogManager;
+
+			//-----------------------------------------------------------------------------------------
+			// ~ Settings
+			//-----------------------------------------------------------------------------------------
+
+			Foomo.defaultServerUrl = 'http://bognertv.radact.interact.com';
+
+			LogManager.defaultLoggingTarget = TerminalTarget;
+			LogManager.level = LogLevel.ALL;
+
+		]]>
+	</fx:Script>
+	<fx:Style source="assets/css/Application.css"/>
+	<logger:Component width="100%" height="100%"/>
+</s:Application>
